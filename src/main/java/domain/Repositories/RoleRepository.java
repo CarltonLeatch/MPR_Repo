@@ -51,6 +51,8 @@ public class RoleRepository extends RepositoryBase<Role> implements IRoleReposit
 		insert.setString(2, r.getName());
 		
 	}
+	
+
 
 	@Override
 	protected String tableName(){
@@ -71,6 +73,8 @@ public class RoleRepository extends RepositoryBase<Role> implements IRoleReposit
 	protected String updateSql(){
 		return "UPDATE role SET user_id = ?, name = ? WHERE id = ?";
 	}
+	
+	
 
 	public List<User> withLogin(String login) {
 		ArrayList users = new ArrayList<User>();

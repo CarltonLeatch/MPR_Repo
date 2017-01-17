@@ -34,6 +34,8 @@ public class PrivilegeRepository extends RepositoryBase<Privilege> implements IP
 		insert.setString(2, p.getName());
 	}
 
+	
+	
 	@Override
 	protected String tableName() {
 		// TODO Auto-generated method stub
@@ -60,6 +62,7 @@ public class PrivilegeRepository extends RepositoryBase<Privilege> implements IP
 		// TODO Auto-generated method stub
 		return "UPDATE privilege SET role_id = ?, name = ? WHERE id = ?";
 	}
+
 
 
 

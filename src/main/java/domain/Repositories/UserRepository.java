@@ -31,6 +31,8 @@ public class UserRepository extends RepositoryBase<User> implements IUserReposit
 		update.setInt(3, u.getId());
 	}
 	
+
+	
 	
 	
 	protected String tableName(){
@@ -51,6 +53,8 @@ public class UserRepository extends RepositoryBase<User> implements IUserReposit
 	protected String updateSql(){
 		return "UPDATE user SET Login = ?, Password = ? WHERE id = ?";
 	}
+	
+
 
 	public List<User> withLogin(String login){
 		

@@ -30,11 +30,12 @@ public class App
     	 p.setName("Privilege");
     	 p.setRoles(catalogOf.roles().withName("xxx"));
     	 p.setRole_id(3);
-    	 
+    	 p.setId(7);
     	User u = new User();
-    	u.setLogin("Rafal");
-    	u.setPassword("xxx");
+    	u.setLogin("Janek");
+    	u.setPassword("zaq");
     	u.setRoles(catalogOf.roles().withName("Role"));
+    	u.setId(1);
     	uow.saveChanges();
     	
     	Role r = new Role();
@@ -42,9 +43,9 @@ public class App
     	r.setUser_id(2);
     	r.setUsers(catalogOf.users().withLogin("Rafal"));
     	
-    catalogOf.privileges().add(p);
+    catalogOf.privileges().add(p);;
     	catalogOf.roles().add(r);
-    	catalogOf.users().add(u);
+    	catalogOf.users().add(u);;
     	
     	catalogOf.save();
     	//System.out.println(catalogOf.users().withLogin("Rafal"));
